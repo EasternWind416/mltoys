@@ -1,6 +1,10 @@
 # mltoys
 Machine Learning Toys for Learning Stuff
 
+### April 16th, 2020
+
+New updated simple GDA and test package.
+
 ### April 11th, 2020
 
 New updated simple logistic regression algorithm and test package.

@@ -24,7 +24,7 @@ def accuracy(pred, y):
     return acc
 
 
-class LogisticRegression():
+class LR():
 
     '''
     Now is the normal logistic regression, whose threshold is 0.5.
