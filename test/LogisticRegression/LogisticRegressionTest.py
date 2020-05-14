@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from Simple.SimpleClassification.BinaryClassification.LogisticRegression import LR
+from Main.LogisticRegression import LR
 
-x_path = './data/logistic_x.txt'
-y_path = './data/logistic_y.txt'
+x_path = './LegoTest/logistic_x.txt'
+y_path = './LegoTest/logistic_y.txt'
 
 with open(y_path, 'r') as yfile:
     ystr = yfile.read()

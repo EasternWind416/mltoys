@@ -1,7 +1,6 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
-from Main.LinearRegression import LR
+from Main.Regression.LinearRegress import LR
 
 
 path = './data/data.txt'

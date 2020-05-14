@@ -1,7 +1,7 @@
 import numpy as np
 
-from Simple.SimpleClassification.ClassificationFunction.Activations import Activation
-from Simple.SimpleClassification.ClassificationFunction.Loss import Loss
+from Main.ClassificationFunction.Activations import Activation
+from Main.ClassificationFunction.Losses import Loss
 
 
 def rec(pred):
@@ -34,7 +34,7 @@ class LR():
     def __init__(self, x, y, lr=0.1, es=1e-6, epochs=100, loss='MSE'):
         '''
 
-        :param x: with shape (N, M-1), which N is the # of train data and M is the degree;
+        :param x: with shape (N, M-1), which N is the # of train LegoTest and M is the degree;
         :param y: with shape (N,),which should be 0 or 1;
         :param lr: learning rate;
         :param es: terminating error;
@@ -52,11 +52,8 @@ class LR():
         self._es = es
         self._epochs = epochs
 
-        self._activation = Activation('sigmoid')
-        self._g = self._activation.getActivation()
-
-        self._lossClass = Loss(loss)
-        self._lossFunction = self._lossClass.getLossFunction()
+        self._g = Activation().getActivation('sigmoid')
+        self._lossFunction = Loss().getLossFunction('MSE')
 
     def fit(self):
 

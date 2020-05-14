@@ -1,9 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from Simple.SimpleClassification.BinaryClassification.LogisticRegression import LR
+from Main.LogisticRegression import LR
 
-path = './data/data_b.txt'
+path = './LegoTest/data_b.txt'
 
 with open(path, 'r') as xfile:
     y = []

@@ -1,10 +1,9 @@
 import numpy as np
-from matplotlib import pyplot as plt
 
-from Simple.SimpleClassification.BinaryClassification.GaussianDiscriminantAnalysis import GDA
+from Main.GaussianDiscriminantAnalysis import GDA
 
-x_path = './data/logistic_x.txt'
-y_path = './data/logistic_y.txt'
+x_path = './LegoTest/logistic_x.txt'
+y_path = './LegoTest/logistic_y.txt'
 
 with open(y_path, 'r') as yfile:
     ystr = yfile.read()
