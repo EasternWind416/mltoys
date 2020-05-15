@@ -19,14 +19,16 @@ def ErrLoss(preds, origin):
     return ((preds - origin) ** 2).sum()
 
 
-class SW:
+class SWR:
     def regress(self, x, y, step=0.1, numIter=100):
         num, feat = x.shape
         w = np.zeros((feat, 1))
+        returnMat = np.zeros((numIter, feat))
         wTemp = w.copy()
         wBest = w.copy()
 
         for i in range(numIter):
+            print('iter times: ', i)
             lErr = np.inf
             for j in range(feat):
                 for sign in [-1, 1]:
@@ -38,5 +40,6 @@ class SW:
                         lErr = err
                         wBest = wTemp
             w = wBest.copy()
+            returnMat[i, :] = w.T
             preds = x.dot(w)
-        return w, preds
+        return returnMat, w, preds
