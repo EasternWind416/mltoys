@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from Main.LogisticRegression import LR
+from Main.Logistic.LogisticRegression import LR
 
 path = './LegoTest/data_b.txt'
 

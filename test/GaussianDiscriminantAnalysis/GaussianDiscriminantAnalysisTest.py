@@ -1,6 +1,6 @@
 import numpy as np
 
-from Main.GaussianDiscriminantAnalysis import GDA
+from Main.Logistic.GaussianDiscriminantAnalysis import GDA
 
 x_path = './LegoTest/logistic_x.txt'
 y_path = './LegoTest/logistic_y.txt'
