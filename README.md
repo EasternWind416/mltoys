@@ -1,7 +1,9 @@
 # mltoys
 Machine Learning Toys for Learning Stuff
 
+#### May 18th, 2020
 
+New updated naive bayes method and test data.
 
 ### May 14th, 2020
 
