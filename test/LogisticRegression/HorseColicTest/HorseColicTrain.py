@@ -1,6 +1,6 @@
 import numpy as np
 
-from Main.Logistic.LogisticRegression import LR
+from ml.Logistic import LR
 
 
 def loadData(fileName):

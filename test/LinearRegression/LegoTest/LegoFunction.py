@@ -1,7 +1,7 @@
 import numpy as np
 from bs4 import BeautifulSoup
 
-from Main.Regression.RidgeRegress import RR
+from ml.Regress import RidgeRegress
 
 
 def scrapePage(retX, retY, fileName, yr, numPce, origPrc):

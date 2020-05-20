@@ -1,7 +1,4 @@
-import numpy as np
-
-from Main.NaiveBayes.Polynomial import Polynomial
-from Main.NaiveBayes.Bernoulli import Bernoulli
+from ml.NaiveBayes import Polynomial
 from test.NaiveBayes.EmailTest.Function import *
 
 hampath = '../email/ham/'

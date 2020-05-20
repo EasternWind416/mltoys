@@ -3,7 +3,7 @@
 """
 import numpy as np
 
-from Main.Regression.LinearRegress import LR
+from ml.Regress import LinearRegress
 
 
 def loadDataSet(fileName):
@@ -38,25 +38,25 @@ x, y = loadDataSet(fileName)
 w = 'Gaussian'
 
 # 使用不同平滑系数的高斯函数在训练集上进行对比
-old01 = LR(x[: 99], y[: 99], w).LWR(0.201)
-old1 = LR(x[: 99], y[: 99], w).LWR(1)
-old10 = LR(x[: 99], y[: 99], w).LWR(10)
+old01 = LinearRegress(x[: 99], y[: 99], w).LWR(0.25)
+old1 = LinearRegress(x[: 99], y[: 99], w).LWR(1)
+old10 = LinearRegress(x[: 99], y[: 99], w).LWR(10)
 
 print('old 01 error size is: ', rssError(old01, y[: 99]))
 print('old 1 error size is: ', rssError(old1, y[: 99]))
 print('old 10 error size is: ', rssError(old10, y[: 99]))
 
 # 使用不同平滑系数的高斯函数在测试集上进行对比
-new01 = LR(x[: 99], y[: 99], w).LWR_test(x[100: 199], x[: 99], 0.234)
-new1 = LR(x[: 99], y[: 99], w).LWR_test(x[100: 199], x[: 99], 1)
-new10 = LR(x[: 99], y[: 99], w).LWR_test(x[100: 199], x[: 99], 10)
+new01 = LinearRegress(x[: 99], y[: 99], w).LWR_test(x[100: 199], x[: 99], 0.234)
+new1 = LinearRegress(x[: 99], y[: 99], w).LWR_test(x[100: 199], x[: 99], 1)
+new10 = LinearRegress(x[: 99], y[: 99], w).LWR_test(x[100: 199], x[: 99], 10)
 
 print('new 01 error size is: ', rssError(new01, y[100: 199]))
 print('new 1 error size is: ', rssError(new1, y[100: 199]))
 print('new 10 error size is: ', rssError(new10, y[100: 199]))
 
 # 使用简单线性回归进行比较
-lr = LR(x[: 99], y[: 99])
+lr = LinearRegress(x[: 99], y[: 99])
 lr.LWR()
 theta = lr.getTheta()
 newx = x[100: 199]

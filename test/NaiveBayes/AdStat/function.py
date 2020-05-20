@@ -1,6 +1,6 @@
 import numpy as np
 
-from Main.NaiveBayes.Polynomial import Polynomial
+from ml.NaiveBayes import Polynomial
 
 
 def bagOfWords2VecMN(vocList, inputSet):

@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from Main.Logistic.LogisticRegression import LR
+from ml.Logistic import LR
 
 x_path = './LegoTest/logistic_x.txt'
 y_path = './LegoTest/logistic_y.txt'

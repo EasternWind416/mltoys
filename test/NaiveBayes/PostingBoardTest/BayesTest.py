@@ -1,8 +1,7 @@
 import numpy as np
 
 from test.NaiveBayes.PostingBoardTest.BayesFunction import *
-from Main.NaiveBayes.Bernoulli import Bernoulli
-from Main.NaiveBayes.Polynomial import Polynomial
+from ml.NaiveBayes import Polynomial
 
 
 postingList, classVec = loadDataSet()
@@ -26,10 +25,9 @@ x = []
 #     print('this is abusive phase!')
 # else:
 #     print('this is not abusive phase.')
-
 bayes = Polynomial()
 for i in range(len(classVec)):
-    x.append(bayes.word2vec(postingList[i], vocList))
+    x.append(words2vec(vocList, postingList[i]))
 x = np.array(x)
 
 phix, phiy = bayes.train(x, classVec)

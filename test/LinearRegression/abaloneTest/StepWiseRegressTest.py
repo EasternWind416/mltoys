@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from Main.Regression.StepWiseRegress import SWR
+from ml.Regress import StepWiseRegress
 
 
 def loadData(fileName):
@@ -29,7 +29,7 @@ xMean = x.mean(axis=0)
 xVar = x.var(axis=0)
 x = (x - xMean) / xVar
 
-returnMat, *_ = SWR().regress(x, y, 0.01, 200)
+returnMat, *_ = StepWiseRegress().regress(x, y, 0.01, 200)
 
 plt.plot(returnMat)
 plt.show()

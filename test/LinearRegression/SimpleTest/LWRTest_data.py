@@ -1,6 +1,6 @@
 import numpy as np
 
-from Main.Regression.LinearRegress import LR
+from ml.Regress import LinearRegress
 
 
 path = './data/data.txt'
@@ -27,7 +27,7 @@ idx = x1.argsort()
 y = x2[idx]
 x = x1[idx]
 
-lwr = LR(x, y, 'Gaussian')
+lwr = LinearRegress(x, y, 'Gaussian')
 preds = lwr.LWR(0.01)
 
 lwr.plot(['x1', 'x2'])

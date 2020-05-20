@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from Main.Regression.RidgeRegress import RR
+from ml.Regress import RidgeRegress
 
 
 def laodData(fileName):
@@ -34,7 +34,7 @@ numTest = 30
 w = np.zeros((numTest, x.shape[1] + 1))
 
 for i in range(numTest):
-    theta, *_ = RR().regress(x, y, np.exp(i-10))
+    theta, *_ = RidgeRegress().regress(x, y, np.exp(i - 10))
     w[i, :] = theta.T
 
 xz = [(i - 10) for i in range(30)]
