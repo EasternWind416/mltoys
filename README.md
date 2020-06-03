@@ -1,6 +1,10 @@
 # mltoys
 **Machine Learning Toys for Learning Stuff**.
 
+#### June 3rd, 2020
+
+- New updated KNN algorithm and test data.
+
 #### June 1st, 2020
 
 - New updated SVM method and test data.
