@@ -1,6 +1,10 @@
 # mltoys
 **Machine Learning Toys for Learning Stuff**.
 
+#### June 24th, 2020
+
+* New updated random forest method and test data.
+
 #### June 8th, 2020
 
 - New updated decision tree method and test data.
